@@ -23,6 +23,8 @@ body {
 user-profile{
   margin: 2rem auto;
   width: 70%;
+  max-width: 40rem;
+  min-width: 20rem;
   min-height: 30rem;
   display: flex;
   flex-direction: column;
@@ -102,6 +104,8 @@ edit-profile {
   position: relative;
   margin: 2rem auto;
   width: 70%;
+  max-width: 40rem;
+  min-width: 20rem;
   min-height: 40rem;
   display: flex;
   flex-direction: column;
