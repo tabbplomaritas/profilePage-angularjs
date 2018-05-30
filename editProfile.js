@@ -7,13 +7,12 @@ const editProfile = {
   <form class="editProfileForm" ng-submit="$ctrl.submitInfo($ctrl.user);">
     <h2>Use the form below to update your profile.</h2>
     <label>Name</label>
-    <input type="text" ng-model="$ctrl.user.name">
+    <input class="input" type="text" ng-model="$ctrl.user.name">
     <label>Contact</label>
-    <input type="text" placeholder="Your email" ng-model="$ctrl.user.contact">
+    <input class="input" type="text" ng-model="$ctrl.user.contact">
     <label>Bio</label>
-    <input type="text" placeholder="Tell me about yourself..." ng-model="$ctrl.user.bio">
+    <textarea id="bioInput" class="input" type="text" ng-model="$ctrl.user.bio"></textarea>
     <button class="button "ng-click="ng-submit">Update</button>
-  
   </form>
   `,
 
