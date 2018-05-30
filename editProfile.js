@@ -7,7 +7,7 @@ const editProfile = {
   <form class="editProfileForm" ng-submit="$ctrl.submitInfo($ctrl.user);">
     <h2>Use the form below to update your profile.</h2>
     <label>Name</label>
-    <input type="text" ng-model="$ctrl.user.name" ng-value="$.ctrl.user.name">
+    <input type="text" ng-model="$ctrl.user.name">
     <label>Contact</label>
     <input type="text" placeholder="Your email" ng-model="$ctrl.user.contact">
     <label>Bio</label>
@@ -19,16 +19,16 @@ const editProfile = {
 
   controller: ["ProfileService", function(ProfileService){
     const vm = this;
+    vm.user= angular.copy(ProfileService.getUserProfile());
     vm.submitInfo = (user) =>{
       console.log(user);
       
       ProfileService.setUserProfile(user);
     }
-
   }]
-
-
 };
+
+
 
 angular
   .module("app")
